@@ -1,0 +1,30 @@
+#container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#hi {
+    direction: rtl;
+    text-align: justify;
+    font-family: "times new roman";
+}
+
+.pasukNum {
+font-size: .8em;
+color: gray;
+}
+
+.chumashOne {
+
+font-size: 1em;
+}
+
+.chumashTwo {
+
+font-size: .9em;
+}
+
+.onkelosOne {
+
+font-size: .8em;
+}
