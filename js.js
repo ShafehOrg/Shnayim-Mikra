@@ -14,6 +14,8 @@ function makeSeforimList() {
         (makeParshiosList(currentSefer));
         thisSeferNum = $(this).attr('value');
     });
+    
+    scrollToTop()
 }
 
 function makeParshiosList(title) {
@@ -32,6 +34,8 @@ function makeParshiosList(title) {
             i++
         }
     });
+    
+    scrollToTop()
 }
 
 function maketxt(parshaPass, aliya) {
@@ -80,6 +84,8 @@ function maketxt(parshaPass, aliya) {
     }
     $('#menu').html("");
     $('#textView').html(txt);
+    
+    scrollToTop()
 }
 
 function Gematria(num, flag = 0) // Return Gimatria in Hebrew for the given number.
@@ -108,6 +114,10 @@ function Gematria(num, flag = 0) // Return Gimatria in Hebrew for the given numb
         Gim = (num == 0) ? "אפס" : "לא ניתן לחישוב"
 
     return Gim;
+}
+
+function scrollToTop() {
+    window.scrollTo(0, 0);
 }
 
 function recalculate() {
