@@ -27,7 +27,7 @@ function makeParshiosList(title) {
 
         //loop through aliyos
         var i = 1
-        while (i <= 7 ) {
+        while (i <= 7) {
             (maketxt($(this).html(), i));
             i++
         }
@@ -45,10 +45,10 @@ function maketxt(parshaPass, aliya) {
     var PerekObj = chumashText[thisSeferNum].text[Number(startPerek)];
     var OnkelosPerekObj = onkelosText[thisSeferNum].text[Number(startPerek)];
 
-    
+
     if (startPerek == endPerek) {
         while (startPasuk <= endPasuk) {
-            txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br>";
+            txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span><br> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span><br> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br><br>";
             startPasuk++;
         }
     } else {
@@ -57,7 +57,7 @@ function maketxt(parshaPass, aliya) {
         // 1:2 3:5 <- include all of 2...
         //go through startperek from startpasuk until no more items
         while (PerekObj[startPasuk]) {
-            txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br>";
+            txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span><br> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span><br> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br><br>";
             startPasuk++;
         }
         if (startPerek + 1 < endPerek) {
@@ -66,7 +66,7 @@ function maketxt(parshaPass, aliya) {
             startPasuk = 0;
             PerekObj = chumashText[thisSeferNum].text[Number(startPerek)];
             while (PerekObj[startPasuk]) {
-            txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br>";
+                txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span><br> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span><br> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br><br>";
                 startPasuk++;
             }
         }
@@ -74,7 +74,7 @@ function maketxt(parshaPass, aliya) {
         PerekObj = chumashText[thisSeferNum].text[Number(endPerek)];
         startPasuk = 0;
         while (startPasuk <= endPasuk) {
-            txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br>";
+            txt += "<span class='pasukNum'>" + Gematria(Number(startPasuk + 1)) + ". </span><span class='chumashOne'>" + PerekObj[startPasuk] + "</span><br> <span class='chumashTwo'>" + PerekObj[startPasuk] + "</span><br> <span class='onkelosOne'>" + OnkelosPerekObj[startPasuk] + ":</span> <br><br>";
             startPasuk++;
         }
     }
@@ -115,6 +115,10 @@ function recalculate() {
 }
 
 $(document).ready(function() {
+//Show menu innitially
+makeSeforimList();
+
+
     $("input").change(function() { recalculate(); });
     $("#calculate").click(function() { recalculate(); });
 });

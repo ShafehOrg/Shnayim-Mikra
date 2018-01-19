@@ -5,26 +5,26 @@
 
 #hi {
     direction: rtl;
-    text-align: justify;
+    text-align: Justify;
     font-family: "times new roman";
 }
 
 .pasukNum {
-font-size: 1.6em;
-color: gray;
+    font-size: 1.6em;
+    color: gray;
 }
 
 .chumashOne {
 
-font-size: 2em;
+    font-size: 2em;
 }
 
 .chumashTwo {
 
-font-size: 1.8em;
+    font-size: 1.8em;
 }
 
 .onkelosOne {
 
-font-size: 1.6em;
+    font-size: 1.6em;
 }
