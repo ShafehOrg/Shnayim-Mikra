@@ -5,7 +5,7 @@ var txt = "";
 
 function makeSeforimList() {
     $('#menu').html("");
-    $('#hi').html("");
+    $('#textView').html("");
     for (var i in seforim) {
         $('#menu').append(`<li value="${i}">${seforim[i]}</li><br>`)
     }
@@ -79,7 +79,7 @@ function maketxt(parshaPass, aliya) {
         }
     }
     $('#menu').html("");
-    $('#hi').html(txt);
+    $('#textView').html(txt);
 }
 
 function Gematria(num, flag = 0) // Return Gimatria in Hebrew for the given number.

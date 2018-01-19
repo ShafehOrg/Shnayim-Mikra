@@ -1,12 +1,66 @@
+@font-face {
+  font-family: 'Ezra SIL';
+  src: url('ezra/SILEOT.ttf') format('truetype');
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    background-color: #F2DBAE;
+}
+
+header {
+    width: 100%;
+    border-bottom: .5px solid grey;
+    height: 45px;
+    background-color: #F2E9CE;
+    //background-color: #F2DBAE;
+    position: fixed;
+}
+
+header input {
+    float: left;
+    position: absolute;
+}
+
+header p {
+    //margin: 0 auto;
+    text-align: center;
+    line-height: 45px;
+    font-size: 22px;
+}
+
 #container {
+    padding-top: 45.5px;
     max-width: 500px;
     margin: 0 auto;
 }
 
-#hi {
+#menu{text-align: center;}
+#menu li{
+	list-style: none;
+	line-height:60px;
+	font-size:25px;
+	word-wrap:break-word;
+	width:95%;
+	max-width:400px;
+	text-align: center;
+	display:inline-block;
+	height:60px;
+	border:1px solid #C2A480;
+	margin: 5px;
+	//font-family: Guttman Stam;
+	font-family: sh;
+	background-color: #F2E9CE;
+}
+
+#textView {
     direction: rtl;
     text-align: Justify;
-    font-family: "times new roman";
+    font-family: "Ezra SIL";
+    padding: 0 10px 0 10px;
 }
 
 .pasukNum {
@@ -15,16 +69,19 @@
 }
 
 .chumashOne {
-
     font-size: 2em;
+    line-height: 1.6em;
 }
 
 .chumashTwo {
 
     font-size: 1.8em;
+    line-height: 1.6em;
+    
 }
 
 .onkelosOne {
 
     font-size: 1.6em;
+    line-height: 1.6em;
 }
