@@ -83,7 +83,7 @@ function maketxt(parshaPass, aliya) {
         }
     }
     $('#menu').html("");
-    $('#textView').html(txt);
+    $('#textView').html(fixShinSin(txt));
     
     scrollToTop()
 }
@@ -133,3 +133,10 @@ makeSeforimList();
     $("#calculate").click(function() { recalculate(); });
 });
 recalculate();
+
+
+function fixShinSin(s) {
+  var re = /ש([ׁ |-ׂ]{1})([֑-ׇ]{1,})/g;
+  var newstr = s.replace(re, 'ש$2$1');
+  return newstr
+}
