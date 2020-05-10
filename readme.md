@@ -5,4 +5,4 @@ Minimal Shnayim Mikra app. With the Pasuk displayed twice and Targum Onkelos onc
 
 Please rate and let us know what you think.
 
-@seforimapps
+@ShafehOrg
