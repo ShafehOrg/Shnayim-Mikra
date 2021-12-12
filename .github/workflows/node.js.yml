@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'yarn'
-    - run: cd www/shnayim mikra/shnayim mikra
+    - run: cd "shnayim mikra"/"shnayim mikra"/www
     - run: yarn install --frozen-lockfile
     - run: yarn build
     - run: yarn test-ci
